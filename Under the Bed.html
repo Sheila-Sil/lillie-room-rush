@@ -772,11 +772,11 @@ const letterEl = document.getElementById('letter');
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' })[c]); }
 function openLetter() {
   letter.opened = true; letter.peekTarget = 12;
-  const intro = `You actually cleaned your room. Even the soda. ${esc(CFG.dog1)} and ${esc(CFG.dog2)} supervised (badly).`;
+  const intro = `Yippeee room clean! ${esc(CFG.dog1)} and ${esc(CFG.dog2)} supervised (more or less).`;
   letterEl.innerHTML = `
     <p class="to" id="lto">Dear ${esc(CFG.herName)},</p>
     <p>${intro}</p>
-    <p>I've been trying to work up the nerve to ask you something, so I snuck this under your bed where only you would find it.</p>
+    <p>I've been trying to work up the nerve to ask you something, so I snuck this under your bed among the many other things under here.</p>
     <p class="ask">May I be your girlfriend?</p>
     <div class="btns" id="btns"><button id="yes" type="button">Yes &#9829;</button><button id="no" type="button">No</button></div>
     <p class="sig">love, ${esc(CFG.fromName)} &#9829;</p>`;
